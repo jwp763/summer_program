@@ -1,0 +1,1 @@
+json.extract! @program, :id, :name, :description, :link, :price, :location_type, :city, :state, :grade_min, :grade_max, :subject, :gender, :ethnicity, :begin_date, :end_date, :travel, :age_min, :age_max, :created_at, :updated_at

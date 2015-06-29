@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get 'pages/faq'
+
+  get 'pages/about_us'
+
+  get 'pages/contact'
+
+  get 'pages/home'
+
+  get 'pages/testimonials'
+
+  resources :programs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

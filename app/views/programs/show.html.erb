@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @program.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @program.description %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @program.link %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @program.price %>
+</p>
+
+<p>
+  <strong>Location type:</strong>
+  <%= @program.location_type %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @program.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @program.state %>
+</p>
+
+<p>
+  <strong>Grade min:</strong>
+  <%= @program.grade_min %>
+</p>
+
+<p>
+  <strong>Grade max:</strong>
+  <%= @program.grade_max %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @program.subject %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @program.gender %>
+</p>
+
+<p>
+  <strong>Ethnicity:</strong>
+  <%= @program.ethnicity %>
+</p>
+
+<p>
+  <strong>Begin date:</strong>
+  <%= @program.begin_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @program.end_date %>
+</p>
+
+<p>
+  <strong>Travel:</strong>
+  <%= @program.travel %>
+</p>
+
+<p>
+  <strong>Age min:</strong>
+  <%= @program.age_min %>
+</p>
+
+<p>
+  <strong>Age max:</strong>
+  <%= @program.age_max %>
+</p>
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>
