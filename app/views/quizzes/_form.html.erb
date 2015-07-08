@@ -1,0 +1,69 @@
+<%= form_for(@quiz) do |f| %>
+  <% if @quiz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quiz.errors.count, "error") %> prohibited this quiz from being saved:</h2>
+
+      <ul>
+      <% @quiz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location_type %><br>
+    <%= f.text_field :location_type %>
+  </div>
+  <div class="field">
+    <%= f.label :max_price %><br>
+    <%= f.number_field :max_price %>
+  </div>
+  <div class="field">
+    <%= f.label :ethnicity %><br>
+    <%= f.text_field :ethnicity %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :environment %><br>
+    <%= f.text_field :environment %>
+  </div>
+  <div class="field">
+    <%= f.label :climate %><br>
+    <%= f.text_field :climate %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :interest %><br>
+    <%= f.text_field :interest %>
+  </div>
+  <div class="field">
+    <%= f.label :travel_type %><br>
+    <%= f.text_field :travel_type %>
+  </div>
+  <div class="field">
+    <%= f.label :grade %><br>
+    <%= f.number_field :grade %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

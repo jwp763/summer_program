@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Quizzes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location type</th>
+      <th>Max price</th>
+      <th>Ethnicity</th>
+      <th>Gender</th>
+      <th>Environment</th>
+      <th>Climate</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Interest</th>
+      <th>Travel type</th>
+      <th>Grade</th>
+      <th>Age</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quizzes.each do |quiz| %>
+      <tr>
+        <td><%= quiz.location_type %></td>
+        <td><%= quiz.max_price %></td>
+        <td><%= quiz.ethnicity %></td>
+        <td><%= quiz.gender %></td>
+        <td><%= quiz.environment %></td>
+        <td><%= quiz.climate %></td>
+        <td><%= quiz.start_date %></td>
+        <td><%= quiz.end_date %></td>
+        <td><%= quiz.interest %></td>
+        <td><%= quiz.travel_type %></td>
+        <td><%= quiz.grade %></td>
+        <td><%= quiz.age %></td>
+        <td><%= quiz.user %></td>
+        <td><%= link_to 'Show', quiz %></td>
+        <td><%= link_to 'Edit', edit_quiz_path(quiz) %></td>
+        <td><%= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quiz', new_quiz_path %>
