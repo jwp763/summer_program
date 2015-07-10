@@ -28,15 +28,45 @@ Rails.application.routes.draw do
   
   resources :quizzes
   
-  get 'pages/faq' => "pages#faq"
+  get 'users/pages/faq' => "pages#faq"
+
+  get 'users/pages/about_us' => "pages#about_us"
+
+  get 'users/pages/contact' => "pages#contact"
+
+  get 'pages/home'=> "users/sign_out"
+
+  get 'pages/programs' => "pages#programs"
+  
+   get 'pages/faq' => "pages#faq"
 
   get 'pages/about_us' => "pages#about_us"
 
   get 'pages/contact' => "pages#contact"
 
-  get 'pages/home'=> "pages#home"
+  get 'users/pages/home'=> "pages#home"
+
+  get 'users/pages/programs' => "pages#programs"
+  
+  get 'users/pages/faq' => "pages#faq"
+
+  get 'users/pages/about_us' => "pages#about_us"
+
+  get 'users/pages/contact' => "pages#contact"
+
+  get 'pages/home'=> "users/sign_out"
 
   get 'pages/programs' => "pages#programs"
+  
+  # get 'faq' => "pages#faq"
+
+  # get 'about_us' => "pages#about_us"
+
+  # get 'contact' => "pages#contact"
+
+  # get 'programs' => "pages#programs"
+  
+
 
   resources :programs
   # The priority is based upon order of creation: first created -> highest priority.
