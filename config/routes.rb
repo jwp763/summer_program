@@ -1,4 +1,31 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'users/create'
+
+  get 'users/new'
+
+  get 'users/destroy'
+
+  get 'users/show'
+
+  devise_for :users
+  
+  resources :users
+
+  devise_scope :user do
+    authenticated :user do
+      root to: "users#show", as: :authenticated_root, via: :get
+    end
+    
+    unauthenticated do
+      root to: "devise/sessions#new"
+    end
+
+  end
+  
+
+  
   resources :quizzes
   
   get 'pages/faq' => "pages#faq"
