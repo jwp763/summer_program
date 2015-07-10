@@ -1,14 +1,42 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'users/create'
+
+  get 'users/new'
+
+  get 'users/destroy'
+
+  get 'users/show'
+
+  devise_for :users
+  
+  resources :users
+
+  devise_scope :user do
+    authenticated :user do
+      root to: "users#show", as: :authenticated_root, via: :get
+    end
+    
+    unauthenticated do
+      root to: "devise/sessions#new"
+    end
+
+  end
+  
+
+  
   resources :quizzes
-  get 'pages/faq'
+  
+  get 'pages/faq' => "pages#faq"
 
-  get 'pages/about_us'
+  get 'pages/about_us' => "pages#about_us"
 
-  get 'pages/contact'
+  get 'pages/contact' => "pages#contact"
 
   get 'pages/home'=> "pages#home"
 
-  get 'pages/testimonials'
+  get 'pages/programs' => "pages#programs"
 
   resources :programs
   # The priority is based upon order of creation: first created -> highest priority.
