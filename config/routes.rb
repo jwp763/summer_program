@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :quizzes
+  
   get 'pages/faq' => "pages#faq"
 
   get 'pages/about_us' => "pages#about_us"
