@@ -20,7 +20,7 @@
   left: 0;
   min-width: 100%;
   height: 500px;
-  max-width: none;
+  max-width: 100px;
 }
 
 .imgthree {
@@ -32,4 +32,17 @@
 
 #button {
     float: left;
+}
+
+a:hover {
+    color: black;
+}
+
+#divone {
+    padding: 0;
+}
+
+#imgpeople {
+    width: 250px;
+    height: 100%;
 }

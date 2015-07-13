@@ -58,13 +58,15 @@ Rails.application.routes.draw do
 
   get 'pages/programs' => "pages#programs"
   
-  # get 'faq' => "pages#faq"
+  get 'faq' => "pages#faq"
 
-  # get 'about_us' => "pages#about_us"
+  get 'about_us' => "pages#about_us"
 
-  # get 'contact' => "pages#contact"
+ get 'contact' => "pages#contact"
 
-  # get 'programs' => "pages#programs"
+ get 'programs' => "pages#programs"
+ 
+ get 'home' => "pages#home"
   
 
 
