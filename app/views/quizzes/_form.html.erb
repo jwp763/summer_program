@@ -10,10 +10,12 @@
       </ul>
     </div>
   <% end %>
+  
 
   <div class="field">
     <%= f.label :location_type %><br>
-    <%= f.text_field :location_type %>
+    <%=f.select(:location_type, ["residential","commuter"])%>
+
   </div>
   <div class="field">
     <%= f.label :max_price %><br>
@@ -21,20 +23,17 @@
   </div>
   <div class="field">
     <%= f.label :ethnicity %><br>
-    <%= f.text_field :ethnicity %>
+    <%= f.select(:ethnicity, ["Under Represented Minority","other"])%>
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.select(:gender, ["male","female"])%>
   </div>
-  <div class="field">
-    <%= f.label :environment %><br>
-    <%= f.text_field :environment %>
-  </div>
-  <div class="field">
-    <%= f.label :climate %><br>
-    <%= f.text_field :climate %>
-  </div>
+  <!--<div class="field">-->
+    <!--<%= f.label :environment %><br>-->
+    <!--<%= f.text_field :environment %>-->
+  <!--</div>-->
+
   <div class="field">
     <%= f.label :start_date %><br>
     <%= f.date_select :start_date %>
@@ -45,24 +44,18 @@
   </div>
   <div class="field">
     <%= f.label :interest %><br>
-    <%= f.text_field :interest %>
+    <%= f.select(:interest, ["STEM","Humanities"])%>
   </div>
   <div class="field">
     <%= f.label :travel_type %><br>
-    <%= f.text_field :travel_type %>
+    <%= f.select(:travel_type, ["urban","rural"])%>
   </div>
   <div class="field">
     <%= f.label :grade %><br>
-    <%= f.number_field :grade %>
+    <%= f.select(:grade, ["9","10","11","12"])%>
   </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
