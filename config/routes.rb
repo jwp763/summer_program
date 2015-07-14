@@ -67,6 +67,8 @@ Rails.application.routes.draw do
  get 'programs' => "pages#programs"
  
  get 'home' => "pages#home"
+ 
+ get 'quizzes' => "quizzes#new"
   
 
 
