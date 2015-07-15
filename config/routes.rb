@@ -27,49 +27,61 @@ Rails.application.routes.draw do
 
   
   resources :quizzes
+  get '' => "pages#home"
   
-  get 'users/pages/faq' => "pages#faq"
+  # get 'users/pages/faq' => "pages#faq"
 
-  get 'users/pages/about_us' => "pages#about_us"
+  # get 'users/pages/about_us' => "pages#about_us"
 
-  get 'users/pages/contact' => "pages#contact"
+  # get 'users/pages/contact' => "pages#contact"
 
-  get 'pages/home'=> "users/sign_out"
+  # get 'pages/home'=> "users/sign_out"
 
-  get 'pages/programs' => "pages#programs"
+  # get 'pages/programs' => "pages#programs"
   
-   get 'pages/faq' => "pages#faq"
+  # get 'pages/faq' => "pages#faq"
 
-  get 'pages/about_us' => "pages#about_us"
+  # get 'pages/about_us' => "pages#about_us"
 
-  get 'pages/contact' => "pages#contact"
+  # get 'pages/contact' => "pages#contact"
 
-  get 'users/pages/home'=> "pages#home"
+  # get 'users/pages/home'=> "pages#home"
 
-  get 'users/pages/programs' => "pages#programs"
+  # get 'users/pages/programs' => "pages#programs"
   
-  get 'users/pages/faq' => "pages#faq"
+  # get 'users/pages/faq' => "pages#faq"
 
-  get 'users/pages/about_us' => "pages#about_us"
+  # get 'users/pages/about_us' => "pages#about_us"
 
-  get 'users/pages/contact' => "pages#contact"
+  # get 'users/pages/contact' => "pages#contact"
 
-  get 'pages/home'=> "users/sign_out"
+  # get 'pages/home'=> "users/sign_out"
 
-  get 'pages/programs' => "pages#programs"
+  # get 'pages/programs' => "pages#programs"
   
   get 'faq' => "pages#faq"
 
-  get 'about_us' => "pages#about_us"
+  get 'about' => "pages#about_us"
 
- get 'contact' => "pages#contact"
+get 'contact' => "pages#contact"
 
- get 'programs' => "pages#programs"
+get 'programs' => "pages#programs"
  
- get 'home' => "pages#home"
+get 'home' => "pages#home"
  
- get 'quizzes' => "quizzes#new"
+get 'quizzes' => "quizzes#new"
   
+  # get 'quizzes/home' => "pages#home"
+
+  # get 'quizzes/about_us' => "pages#about_us"
+
+  # get 'quizzes/contact' => "pages#contact"
+
+  # get 'quizzes/programs' => "pages#programs"
+
+  # get 'quizzes/faq' => "pages#faq"
+  
+  get 'profile' => "users#show"
 
 
   resources :programs

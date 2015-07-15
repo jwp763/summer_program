@@ -62,13 +62,13 @@ class QuizzesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    #Use callbacks to share common setup or constraints between actions.
     def set_quiz
-      @quiz = Quiz.find(params[:id])
+      @quiz = Quiz.find(params[:id]) 
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    #Never trust parameters from the scary internet, only allow the white list through.
     def quiz_params
       params.require(:quiz).permit(:location_type, :max_price, :ethnicity, :gender, :environment, :climate, :start_date, :end_date, :interest, :travel_type, :grade, :age, :user_id)
-    end
-end
+    end 
+end 
