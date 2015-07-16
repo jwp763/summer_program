@@ -34,8 +34,13 @@
     float: left;
 }
 
+h4:hover {
+    color:black;
+}
+
 a:hover {
-    color: black;
+    color: blue;
+    text-decoration: none;
 }
 
 #divone {
@@ -45,4 +50,8 @@ a:hover {
 #imgpeople {
     width: auto;
     height: 250px;
+}
+
+table {
+    border: solid;
 }
