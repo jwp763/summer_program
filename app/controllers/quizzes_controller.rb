@@ -10,6 +10,14 @@ class QuizzesController < ApplicationController
   # GET /quizzes/1
   # GET /quizzes/1.json
   def show
+    @programs = Program.all
+    @quiz = current_user.quiz
+    
+    @programs = @programs.where(subject:@quiz.interest) if @quiz.interest
+    @programs = @programs.where(location_type:@quiz.travel_type) if @quiz.travel_type
+    @programs = @programs.where(travel:@quiz.location_type) if @quiz.location_type
+    #@programs = @programs.where(ethnicity:@quiz.ethnicity) if @quiz.ethnicity
+    #@programs = @programs.where(price:@quiz.max_price) if @quiz.max_price
   end
 
   # GET /quizzes/new
@@ -69,6 +77,8 @@ class QuizzesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quiz_params
-      params.require(:quiz).permit(:location_type, :max_price, :ethnicity, :gender, :environment, :climate, :start_date, :end_date, :interest, :travel_type, :grade, :age, :user_id)
+      params.require(:quiz).permit(:location_type, :max_price, :ethnicity, :gender, :environment, :climate, :start_date, :end_date, :interest, :travel_type, :grade, :age, :user_id).delete_if{|k,v| v.blank?}
     end
+    
+
 end

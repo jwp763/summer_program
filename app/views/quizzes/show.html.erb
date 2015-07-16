@@ -1,69 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Location type:</strong>
-  <%= @quiz.location_type %>
-</p>
-
-<p>
-  <strong>Max price:</strong>
-  <%= @quiz.max_price %>
-</p>
-
-<p>
-  <strong>Ethnicity:</strong>
-  <%= @quiz.ethnicity %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @quiz.gender %>
-</p>
-
-<p>
-  <strong>Environment:</strong>
-  <%= @quiz.environment %>
-</p>
-
-<p>
-  <strong>Climate:</strong>
-  <%= @quiz.climate %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @quiz.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @quiz.end_date %>
-</p>
-
-<p>
-  <strong>Interest:</strong>
-  <%= @quiz.interest %>
-</p>
-
-<p>
-  <strong>Travel type:</strong>
-  <%= @quiz.travel_type %>
-</p>
-
-<p>
-  <strong>Grade:</strong>
-  <%= @quiz.grade %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @quiz.age %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @quiz.user %>
-</p>
-
+  <% @programs.each do |program| %>
+ 
+  
+  <div class="media">
+    <div class="pull-left">
+      <a href="#">
+        <img class="media-object" src="http://www.cusdk12.org/nsite/wp-content/uploads/CalexicoHigh-150x150.png" alt="">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%=  program.name %></h4>
+      <p><%= program.description %></p>
+      <p><a href=<%= program.link %>> More information! </a></p>
+    </div>
+  </div>
+  <% end %>
 <%= link_to 'Edit', edit_quiz_path(@quiz) %> |
 <%= link_to 'Back', quizzes_path %>

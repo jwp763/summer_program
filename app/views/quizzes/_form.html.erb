@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :ethnicity %><br>
-    <%= f.select(:ethnicity, ["Under Represented Minority","other"])%>
+    <%= f.select(:ethnicity, ["Under Represented Minority","other"],:include_blank => true)%>
   </div>
   <div class="field">
     <%= f.label :gender %><br>
