@@ -28,13 +28,34 @@
 
   <tbody>
     <% @programs.each do |program| %>
+         <a href=<%= program.link %>> <h4><%= program.name %> </h4></a>
+      <div class="media">
+        <div class="media-left">
+            <a href=<%= program.link %>>
+              <img class="media-object" src="https://i.ytimg.com/vi/hTeqBLsKdw8/hqdefault.jpg" alt="MIT">
+          </a>
+          </div>
+    <div class="media-body">
+      <h4 class="media-heading"></h4>
+        <p> Location: <%= program.city %>, <%= program.state %> </p>
+        <p> Price: <%= program.price %></p>
+        <p> Description: <%= program.description %></p>
+        <p> Type of City: <%= program.location_type %></p>
+        <p> Dates: <%= program.begin_date %>, <%= program.end_date %> </p>
+        <p> Field of Interest: <%= program.subject %> </p>
+        <p> Commuter or Residential: <%= program.travel %> </p>
+        <p> Grade level Range: <%= program.grade_min %> - <%= program.grade_max %> </p>
+        
+      </div>
+    </div>
+      
       <tr>
         <td><%= program.name %></td>
         <td><%= program.description %></td>
         <td><%= program.link %></td>
         <td><%= program.price %></td>
         <td><%= program.location_type %></td>
-        <td><%= program.city %></td>
+        <td></td>
         <td><%= program.state %></td>
         <td><%= program.grade_min %></td>
         <td><%= program.grade_max %></td>

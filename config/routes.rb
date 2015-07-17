@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
   end
   
+  resources :programs
 
   
   resources :quizzes
@@ -84,7 +85,6 @@ Rails.application.routes.draw do
   get 'profile' => "users#show"
 
 
-  resources :programs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
