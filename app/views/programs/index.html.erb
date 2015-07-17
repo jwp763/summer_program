@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12" id="f">
 <p id="notice"><%= notice %></p>
 <div class = "container"> 
 <div class = "row">
@@ -5,31 +8,31 @@
   
 
 
-<h1>Listing Programs</h1>
+<h1>Programs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Link</th>
-      <th>Price</th>
-      <th>Location type</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Grade min</th>
-      <th>Grade max</th>
-      <th>Subject</th>
-      <th>Gender</th>
-      <th>Ethnicity</th>
-      <th>Begin date</th>
-      <th>End date</th>
-      <th>Travel</th>
-      <th>Age min</th>
-      <th>Age max</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Name</th>-->
+<!--      <th>Description</th>-->
+<!--      <th>Link</th>-->
+<!--      <th>Price</th>-->
+<!--      <th>Location type</th>-->
+<!--      <th>City</th>-->
+<!--      <th>State</th>-->
+<!--      <th>Grade min</th>-->
+<!--      <th>Grade max</th>-->
+<!--      <th>Subject</th>-->
+<!--      <th>Gender</th>-->
+<!--      <th>Ethnicity</th>-->
+<!--      <th>Begin date</th>-->
+<!--      <th>End date</th>-->
+<!--      <th>Travel</th>-->
+<!--      <th>Age min</th>-->
+<!--      <th>Age max</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
 
   <tbody>
     <% @programs.each do |program| %>
@@ -54,35 +57,41 @@
       </div>
     </div>
       
-      <tr>
-        <td><%= program.name %></td>
-        <td><%= program.description %></td>
-        <td><%= program.link %></td>
-        <td><%= program.price %></td>
-        <td><%= program.location_type %></td>
-        <td></td>
-        <td><%= program.state %></td>
-        <td><%= program.grade_min %></td>
-        <td><%= program.grade_max %></td>
-        <td><%= program.subject %></td>
-        <td><%= program.gender %></td>
-        <td><%= program.ethnicity %></td>
-        <td><%= program.begin_date %></td>
-        <td><%= program.end_date %></td>
-        <td><%= program.travel %></td>
-        <td><%= program.age_min %></td>
-        <td><%= program.age_max %></td>
-        <td><%= link_to 'Show', program %></td>
-        <td><%= link_to 'Edit', edit_program_path(program) %></td>
-        <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<!--      <tr>-->
+<!--        <td><%= program.name %></td>-->
+<!--        <td><%= program.description %></td>-->
+<!--        <td><%= program.link %></td>-->
+<!--        <td><%= program.price %></td>-->
+<!--        <td><%= program.location_type %></td>-->
+<!--        <td></td>-->
+<!--        <td><%= program.state %></td>-->
+<!--        <td><%= program.grade_min %></td>-->
+<!--        <td><%= program.grade_max %></td>-->
+<!--        <td><%= program.subject %></td>-->
+<!--        <td><%= program.gender %></td>-->
+<!--        <td><%= program.ethnicity %></td>-->
+<!--        <td><%= program.begin_date %></td>-->
+<!--        <td><%= program.end_date %></td>-->
+<!--        <td><%= program.travel %></td>-->
+<!--        <td><%= program.age_min %></td>-->
+<!--        <td><%= program.age_max %></td>-->
+<!--        <td><%= link_to 'Show', program %></td>-->
+<!--        <td><%= link_to 'Edit', edit_program_path(program) %></td>-->
+<!--        <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--      </tr>-->
     <% end %>
-  </tbody>
-</table>
+<!--  </tbody>-->
+<!--</table>-->
 
 <br>
 
+<<<<<<< HEAD
+<!--<%= link_to 'New Program', new_program_path %>-->
+</div>
+</div>
+=======
 <%= link_to 'New Program', new_program_path %>
 </div>
 </div> 
+>>>>>>> d13bbab5fa36f4785f32c3ce5643c52b79e2dc72
 </div>
