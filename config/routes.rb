@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   
   resources :quizzes
-  get '' => "pages#home"
+  get '' => "devise/sessions#new"
   
   # get 'users/pages/faq' => "pages#faq"
 
@@ -63,13 +63,13 @@ Rails.application.routes.draw do
 
   get 'about' => "pages#about_us"
 
-get 'contact' => "pages#contact"
+  get 'contact' => "pages#contact"
 
-get 'programs' => "pages#programs"
+  get 'programs' => "pages#programs"
  
-get 'home' => "pages#home"
+  get 'home' => "pages#home"
  
-get 'quizzes' => "quizzes#new"
+  get 'quizzes' => "quizzes#new"
   
   # get 'quizzes/home' => "pages#home"
 

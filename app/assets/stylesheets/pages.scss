@@ -55,3 +55,22 @@ a:hover {
 table {
     border: solid;
 }
+
+#imgfour {
+    // height: 375px;
+    // min-width: auto;
+    // max-width: none;
+    width: 500px;
+    height: auto;
+}
+
+.carousel-caption {
+    background: gray !important;
+    color: white;
+    opacity: 0.8;
+}
+
+#imgtest {
+    height: 400px;
+    max-width: auto;
+}
