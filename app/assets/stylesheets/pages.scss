@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .img {
-    margin: -30px;
+    margin: -25px;
     width: 4in;
     height: auto;
 }
@@ -72,5 +72,11 @@ table {
 
 #imgtest {
     height: 400px;
+    max-width: auto;
+}
+
+
+#imgtest_loggedout {
+    height: 300px;
     max-width: auto;
 }
