@@ -1,4 +1,5 @@
 class QuizzesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_quiz, only: [:show, :edit, :update, :destroy]
 
   # GET /quizzes
@@ -32,7 +33,7 @@ class QuizzesController < ApplicationController
   # POST /quizzes
   # POST /quizzes.json
   def create
-    @quiz = Quiz.new(quiz_params)
+    @quiz = current_user.build_quiz(quiz_params)
 
     respond_to do |format|
       if @quiz.save
