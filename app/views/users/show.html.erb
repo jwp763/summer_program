@@ -12,14 +12,14 @@
         </div>
         <div class="media-body">
           <h4 class="media-heading"></h4>
-          <p> Location: </p>
-          <p> Price: </p>
-          <p> Type of City: </p>
-          <p> Dates: </p>
-          <p> Field of Interest: </p>
-          <p> Commuter or Residential: </p>
-          <p> Grade level: </p>
-          <p> Ages: </p>
+          <h4> Location: </h4>
+          <h4> Price: </h4>
+          <h4> Type of City: </h4>
+          <h4> Dates: </h4>
+          <h4> Field of Interest: </h4>
+          <h4> Commuter or Residential: </h4>
+          <h4> Grade level: </h4>
+          <h4> Ages: </h4>
         </div>
       </div>
       <a href="https://oeop.mit.edu/programs/mites"><h4> MITES: Minority Introduction to Engineering and Science at MIT </h4></a>
@@ -31,35 +31,35 @@
         </div>
         <div class="media-body">
           <h4 class="media-heading"></h4>
-          <p> Location: </p>
-          <p> Price: </p>
-          <p> Type of City: </p>
-          <p> Dates: </p>
-          <p> Field of Interest: </p>
-          <p> Commuter or Residential: </p>
-          <p> Grade level: </p>
-          <p> Ages: </p>
+          <h4> Location: </h4>
+          <h4> Price: </h4>
+          <h4> Type of City: </h4>
+          <h4> Dates: </h4>
+          <h4> Field of Interest: </h4>
+          <h4> Commuter or Residential: </h4>
+          <h4> Grade level: </h4>
+          <h4> Ages: </h4>
         </div>
       </div>
-      <h3><%= link_to 'Sign Out', destroy_user_session_path, :method=> 'delete' %></h3>
+      <h4><%= link_to 'Sign Out', destroy_user_session_path, :method=> 'delete' %></h4>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-3">
       <h1> Take the quiz </h1>
       <a href="quizzes/new">
         <h4>Click here: Match yourself to the perfect program with our comprehensive quiz!</h4></a>
-
-      <h1> My Profile </h1>
-      <h4> Program criteria:</h4>
-      <p> Gender: </p>
-      <P> Location: </P>
-      <p> Price: </p>
-      <p> Type of City: </p>
-      <p> Dates: </p>
-      <p> Field of Interest: </p>
-      <p> Commuter or Residential: </p>
-      <p> Grade level: </p>
-      <p> Age: </p>
+      <% if current_user.quiz %> 
+        <h1> My Profile </h1>
+       
+        <h4>Gender: <%= current_user.quiz.gender %></h4>
+        <h4> Environment: <%= current_user.quiz.environment %> </h4>
+        <h4> Max Price: <%= current_user.quiz.max_price %></h4>
+        <h4> Ethnicity: <%= current_user.quiz.environment %> </h4>
+        <h4> Dates: <%= current_user.quiz.start_date %> to <%= current_user.quiz.end_date %> </h4>
+        <h4> Field of Interest: <%= current_user.quiz.interest %> </h4>
+        <h4> Travel Type: <%= current_user.quiz.travel_type %></h4>
+        <h4> Grade level: <%= current_user.quiz.grade %> </h4>
+      <% end %>
     </div>
   </div>
 </div>
